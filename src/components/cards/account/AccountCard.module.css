@@ -1,0 +1,116 @@
+.account {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  width: 15rem;
+  height: auto;
+  background-color: var(--dark-blue);
+  position: relative;
+}
+
+.account,
+.user {
+  border-radius: 0.75rem;
+}
+
+.user {
+  background-color: var(--blue);
+  padding: 2rem;
+  height: 70%;
+}
+
+.user .name,
+.user .title {
+  font-weight: 300;
+  display: inline-block;
+}
+
+.user .title {
+  font-size: 1rem;
+}
+
+.user .name {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.user .image {
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 2rem;
+  border-radius: 50%;
+  border: 0.25rem white solid;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  font-size: 2rem;
+}
+
+.buttons button {
+  grid-column: 1;
+  text-align: left;
+
+  font-size: 1.25rem;
+  background: none;
+  border: none;
+  color: var(--desaturated-blue);
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  color: var(--pale-blue);
+}
+
+.buttons .active,
+.buttons button:active {
+  color: white;
+}
+
+@media (max-width: 376px) {
+  .account {
+    width: 20rem;
+  }
+
+  .user {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .user .image {
+    margin: 0;
+  }
+
+  .user .title {
+    font-size: 1rem;
+  }
+
+  .user .name {
+    font-size: 1.25rem;
+  }
+
+  .buttons {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1.5rem;
+  }
+
+  .buttons button {
+    grid-column: unset;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
